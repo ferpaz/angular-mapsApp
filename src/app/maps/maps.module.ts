@@ -10,6 +10,10 @@ import { MarkersPageComponent } from './pages/markers-page/markers-page.componen
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
 
+// Seteo de la key para no tener que hacerlo en cada componente
+import mapbox from 'mapbox-gl';
+import { environment } from '../../environments/environment';
+(mapbox as any).accessToken = environment.mapbox_key
 
 @NgModule({
   declarations: [
