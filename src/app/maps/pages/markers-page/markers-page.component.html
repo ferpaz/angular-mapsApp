@@ -1,1 +1,27 @@
-<p>markers-page works!</p>
+<div #map class="fullscreenmap"></div>
+
+<ul class="list-group">
+  @for (marker of markers; track $index) {
+    <li class="list-group-item">
+      <button class="btn btn-sm float-none"
+        [style.color]="invertColor(marker.color)"
+        [style.background-color]="marker.color"
+        (click)="flyTo(marker.marker)">
+        <small>←</small>
+      </button>
+
+      <span class="markerText mx-2 my-2 align-content-center">
+        Mark {{ $index }}
+      </span>
+
+      <button class="btn btn-danger btn-sm float-right" (click)="deleteMarker($index)">
+        <small>Borrar</small>
+      </button>
+    </li>
+  }
+
+</ul>
+
+<button class="btn btn-primary addMarkerButton" (click)="createMarker()">
+  + Agregar marcador
+</button>

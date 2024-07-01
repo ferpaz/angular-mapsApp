@@ -1,0 +1,23 @@
+.fullscreenmap {
+  width: 100vw;
+  height: 100vh;
+}
+
+.list-group {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.addMarkerButton{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+}
+
+.markerText {
+  cursor: pointer;
+}
